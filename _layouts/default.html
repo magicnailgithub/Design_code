@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> {% if page.title %} {{ page.title }} {% endif %} </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="assets/js/function.js"></script>
+    {% if page.type =="post" %}{{ page.styles }}{% endif %}
+  </head>
+  <body class="{% if page.home %}home blog logged-in{% endif %} {{ page.type }} {%if page.body-name%}{{ page.body-name }}{% endif %}">
+
+  {{ content }}
+
+  {% if page.url == "/index.html" %}
+
+  {% endif %}
+
+
+  </body>
+</html>

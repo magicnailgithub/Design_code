@@ -1,0 +1,242 @@
+section.contact
+  width: 100%
+  height: 600px
+  background:
+    //image: url(../img/blur-bg.jpg)
+    color: $contact-color
+    size: 100% auto
+    repeat: no-repeat
+    position: center
+    //attachment: fixed
+  //margin-top: 50px
+
+  @media (max-width: 640px)
+    height: 525px
+
+  .flex
+    width: 100%
+    height: 100%
+
+    @media (max-width: 1100px)
+      flex-direction: column
+
+    .left-contact
+      position: relative
+      height: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: flex-end
+      order: -1
+
+      @media (max-width: 1100px)
+        align-items: center
+        order: 1
+        height: 125px
+
+
+      .social-description
+        width: 42vw
+        text-align: center
+        opacity: 0
+        transform: translateX(-10px)
+        transition: all 0.2s ease-in-out
+
+        h3
+          margin: 0
+          color: white
+
+        @media (max-width: 1100px)
+          width: 100%
+
+      .contact-image-container
+        overflow: hidden
+        position: relative
+        bottom: 0
+        left: 0
+        right: 0
+        margin: 0
+        height: 14vw
+        width: 42vw
+        z-index: 3
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+
+        .facebook,.google,.yelp
+          width: 30%
+          height: 90%
+          background:
+            //image: url(../img/blur-bg.jpg)
+            size: 100% auto
+            repeat: no-repeat
+            position: center
+          border-radius: 50%
+          box-sizing: border-box
+          border: solid white 10px
+          transition: all 0.1s ease-in-out
+          transform: scale(0)
+
+          &:hover
+            border: solid white 0px
+
+          &.pop
+            animation-name: popping
+            animation-duration: 0.2s
+            animation-fill-mode: forwards
+            //transform: scale(1)
+
+          @media (max-width: 1100px)
+            width: 90px
+            height: 90px
+
+        @media (max-width: 1100px)
+          width: 300px
+          height: 90px
+
+
+
+
+        .facebook
+          background-image: url(../img/facebook.svg)
+        .google
+          background-image: url(../img/google.svg)
+        .yelp
+          background-image: url(../img/yelp.svg)
+
+        //@media (max-width: 1100px)
+          display: none
+
+
+
+
+    .right-contact
+      height: 100%
+      position: relative
+      align-items: center
+      padding: 0
+
+      @media (max-width: 1100px)
+        height: 475px
+
+      @media (max-width: 640px)
+        justify-content: center
+        height: 400px
+        //margin-bottom: 50px
+
+      .contact-content
+        height: 100%
+        width: 90%
+        position: relative
+        //border-radius: 2vw
+        //border: solid $accent-color 1px
+        //background: white
+        text-align: center
+        //padding: 0 10px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        transition: all 0.3s ease-in-out
+        transform: translateX(0)
+        position: absolute
+        z-index: 2
+        //top: 0
+        //bottom: 0
+        //margin: auto
+
+        //@media (max-width: 1100px)
+          justify-content: flex-end
+
+        //.title
+          background: $contact-color
+          width: 100%
+          height: 23.3%
+          //border: solid $accent-color 1px
+          //border-radius: 2vw 2vw 0 0
+          display: flex
+          flex-direction: column
+          justify-content: center
+          opacity: 0
+          transform: translateX(-10px)
+
+        .arrow-purple
+          width: 0
+          height: 0
+          border-left: 50px solid transparent
+          border-right: 50px solid transparent
+          border-top: 50px solid $service-color
+          position: absolute
+          top: 0
+
+        .content-c
+          width: 100%
+          height: 80%
+          display: flex
+          //background: white
+          color: white
+          //border: solid white 1px
+          //border-radius: 2vw
+          flex-direction: column
+          justify-content: center
+          opacity: 0
+          transform: translateX(-10px)
+          //margin: 0 20px
+
+          h1
+            color: white
+            margin: 0
+            margin-bottom: 20px
+
+          @media (max-width: 640px)
+            h1
+              font-size: 50px
+
+          .address,.phone,.hours
+            text-align: center
+            margin-bottom: 5px
+
+
+            h3
+              color: white
+              margin: 0
+              text-decoration: underline
+            p
+              font-family: 'Quicksand', sans-serif
+              color: white
+              font-style: normal
+              font-size: 18px
+
+            a
+              font-size: 18px
+
+            @media (max-width: 640px)
+                h3
+                  font-size: 20px
+                p
+                  font-size: 14px
+                a
+                  font-size: 14px
+
+        //@media (max-width: 640px)
+          width: 80%
+          position: relative
+          margin: auto
+          transform: translateX(0)
+          .title
+            h1
+              font-size: 40px
+          .content-c
+            p
+              font-size: 14px
+
+
+  @keyframes popping
+    0%
+      transform: scale(0)
+    60%
+      transform: scale(1)
+    80%
+      transform: scale(0.9)
+    100%
+      transform: scale(1)

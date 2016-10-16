@@ -1,0 +1,91 @@
+.home-wrap
+  display: flex
+  //background-color: lightyellow
+  min-height: 100vh
+
+  @media (max-width: 840px)
+    display: block
+
+.is-started
+  transition: all 0.3s ease-in-out
+  opacity: 1 !important
+  transform: translateX(0) !important
+
+.home-sections
+  flex: 1
+
+  //section
+    padding: 50px 0
+    margin: 50px 0
+
+  //affect how the columns are displayed
+  .flex
+    //background-color: pink
+    display: flex
+    //flex-direction: row
+
+  //for those that need to be within the grid
+  .flex--center
+    justify-content: center
+
+  //for those that flow a little bit out
+  .flex--space
+    justify-content: space-around
+
+  .order-first
+    order: -1
+
+
+
+//columns
+.col-34
+  width: 75%
+
+
+.push-right
+  margin-left: 330px
+
+
+.col-50
+  width: 50%
+  //background: lightblue
+
+
+
+@media (max-width: 640px)
+  .home-sections
+    display: block
+
+  .col-1
+    width: 100%
+    margin: 0
+
+  .col-34
+    width: auto
+
+  .col-2
+    margin: 0
+
+  .push-right
+    margin-left: 0px
+
+  .col-50
+    width: 100%
+    margin: 0
+
+
+//Typogrphy
+.home-lead
+  font-size: 36px
+  line-height: 1.1
+  margin: 0px
+
+  &.outdented
+    text-indent: -0.75em
+
+@media (max-width: 640px)
+  .home-lead
+    text-align: center
+    &.outdented
+      text-indent: 0
+      font-size: 28px

@@ -1,0 +1,395 @@
+
+
+.home-wrap
+  .mobile-nav-container
+    .mobile-nav
+      display: none
+      //position: fixed
+      width: 70%
+      //margin-left: 25%
+      //background: white
+      //z-index: 5
+      padding: 65px 0
+      //top: 30px
+
+
+      ul
+        list-style: none
+        margin: 0
+        padding: 0
+
+      li
+        text-align: center
+        //margin-bottom: 10px
+
+        a
+          text-decoration: none
+          color: $link-color
+
+  header
+    background: white
+    width: 135px
+    z-index: 5
+
+    .header-position
+      position: fixed
+      //z-index: 5
+      width: 135px
+      top: 0
+      bottom: 0
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+      //border-right: solid $accent-color 0.5px
+      //background: pink
+
+      .find-nav-bar
+        width: 700px
+        transform: translateX(-565px)
+        height: 400px
+        background: $accent-color
+        display: flex
+        justify-content: flex-end
+        transition: all 0.3s ease-in-out
+        position: relative
+
+        &:hover
+          transform: translateX(0)
+
+        .find-nav-content
+          width: 100%
+          display: flex
+          justify-content: center
+          align-items: center
+          opacity: 0
+          transition: all 0.3s ease-in-out
+
+          &.is-open
+            opacity: 100
+
+          .find-nav-contact
+            height: 400px
+            display: flex
+            flex-direction: row
+            .find-nav-text
+              height: 100%
+              display: flex
+              flex-direction: column
+              justify-content: center
+              margin-right: 20px
+
+              .address,.phone
+                text-align: right
+
+                h3
+                  color: white
+                  margin: 0
+                  text-decoration: underline
+                p
+                  font-family: 'Quicksand', sans-serif
+                  color: white
+                  font-style: normal
+                  font-size: 18px
+
+                a
+                  font-size: 18px
+                  text-decoration: none
+
+                  &:hover
+                    text-decoration: underline
+
+            .address-image
+              width: 300px
+              height: 300px
+              margin: 50px 0
+              border: solid white 0.5px
+              border-radius: 10px
+              background:
+                image: url(../img/tien-doing-nail.jpg)
+                size: contain
+                repeat: no-repeat
+                position: center
+                //color: black
+
+        .find-nav-label
+          display: flex
+          width: 85px
+          text-align: center
+          align-items: center
+          position: absolute
+          height: 100%
+          right: 50px
+          opacity: 100
+          transition: all 0.3s ease-in-out
+
+          &.is-open
+            opacity: 0
+
+          h3
+            color: white
+
+
+
+        .pull-bar
+          width: 50px
+          border-left: solid white 0.5px
+          display: flex
+          justify-content: center
+          align-items: center
+
+          .circle-pull
+            width: 30px
+            height: 30px
+            border: solid white 0.5px
+            border-radius: 50%
+
+
+
+      .site-nav
+        //background: pink
+        height: 100%
+        ul.nav-list
+          display: block
+          list-style: none
+          padding: 0
+          margin: 0
+          height: 100%
+          //background: pink
+          //border-top: solid $accent-color 0.5px
+          //border-bottom: solid $accent-color 0.5px
+
+          li
+            //text-align: center
+            height: 25%
+
+            .nav-home,.nav-about,.nav-service,.nav-contact
+              opacity: 0
+
+              &.show
+                opacity: 1
+
+            a
+              text-decoration: none
+              text-align: center
+              font-size: 30px
+              line-height: 1.8em
+              color: white
+              //color: white
+              display: block
+              height: 100%
+              //border-top: solid $accent-color 0.5px
+              transition: all 0.3s ease-in-out
+              display: flex
+              align-items: center
+              justify-content: center
+
+              &.nav-home
+                background: #2ecc71
+
+                &:hover
+                  background: #27ae60
+                  //color: white
+
+              &.nav-about
+                background: $about-color
+                &:hover
+                  background: #2980b9
+
+
+              &.nav-service
+                background: $service-color
+
+                &:hover
+                  background: #8e44ad
+
+              &.nav-contact
+                background: $contact-color
+                &:hover
+                  background: #c0392b
+
+
+    .mobile-nav-toggle
+      width: 50px
+      height: 50px
+      //background-color: pink
+      margin-right: 20px
+      align-items: center
+      cursor: pointer
+      position: relative
+      //display none so that it doesn't show up when the screen is normal
+      display: none
+
+
+      span,
+      span:before,
+      span:after
+        content: ""
+        display: block
+        height: 3px
+        width: 100%
+        background: #333
+        position: relative
+        //set the transition specific times and smooth it out
+        transition: all 0.3s ease-in-out
+
+      span:before
+        top: 15px
+
+      span:after
+        bottom: 18px
+
+      &.is-open
+        border-radius: 5px 0 0 5px
+        margin: 0 0
+        background: $accent-color
+
+      &.is-open span
+        background: transparent
+
+      &.is-open span:before
+        transform-origin: center
+        transform: rotate(45deg)
+        top: 0
+        background: white
+
+      &.is-open span:after
+        transform-origin: center
+        transform: rotate(-45deg)
+        top: -3px
+        background: white
+
+    .mobile-logo
+      display: none
+      //p
+        font-family: 'Quicksand', sans-serifS
+        font-style: normal
+        font-weight: 400
+        font-size: 6vw
+
+
+
+  @media (max-width: 840px)
+    .mobile-nav-container
+      display: flex
+      justify-content: flex-end
+      height: 100%
+      width: 70%
+      position: fixed
+      right: 0
+      z-index: 6
+      transform: translateX(100%)
+      transition: all 0.3s ease-in-out
+
+      &.is-open
+        transform: translateX(0)
+
+      .mobile-nav
+        position: relative
+        display: flex
+        flex-direction: column
+        //justify-content: space-between
+        //align-items: center
+        width: 100%
+        height: calc(100% - 65px)
+        background-color: $accent-color
+
+        ul
+          list-style: none
+          padding: 0
+          width: 100%
+
+
+          li
+            text-align: center
+            width: 100%
+
+            a
+              text-decoration: none
+              font-size: 20px
+              line-height: 2.2em
+              color: white
+              display: block
+              width: 100%
+              border-top: solid white 0.5px
+              transition: all 0.2s ease-in-out
+
+              &:hover
+                color: $accent-color
+                background: white
+                //border-radius: 0 10px 10px 0
+                //border-style: none
+
+                //&:after
+                  width: 150px
+
+            &:last-child
+              border-bottom: solid white 0.5px
+
+              &:hover
+                border-style: none
+
+        .contact-container
+          display: flex
+          flex-direction: column
+          align-items: center
+          justify-content: center
+          flex-grow: 1
+          overflow: hidden
+          .address,.phone,.hours
+            text-align: center
+
+
+            h3
+              color: white
+              margin: 0
+              text-decoration: underline
+            p
+              font-family: 'Quicksand', sans-serif
+              color: white
+              font-style: normal
+              font-size: 18px
+
+    header
+      width: 100%
+      position: fixed
+      .header-position
+        width: 100%
+        height: 80px
+        border-right: none
+        border-bottom: solid $accent-color 0.5px
+        flex-direction: row
+        justify-content: flex-start
+        align-items: center
+        transition: all 0.3s ease-in-out
+        position: relative
+
+        &.is-open
+          width: 30%
+
+
+        .place-holder,.site-nav,.find-nav-bar
+          display: none
+
+        .mobile-nav-toggle
+          display: flex
+          position: absolute
+          right: 0
+          top: 15px
+
+
+        .mobile-logo
+          display: block
+          opacity: 0
+          transition: all 0.3s ease-in-out
+          margin-left: 20px
+          height: 100%
+          width: 30%
+          background:
+            image: url(../img/logo.svg)
+            size: contain
+            position: center
+            repeat: no-repeat
+          &.is-passed
+            opacity: 100
+          &.is-open
+            opacity: 0

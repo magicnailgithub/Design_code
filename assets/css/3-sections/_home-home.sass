@@ -1,0 +1,74 @@
+section.home-page
+  height: calc(100vh - 100px)
+  padding-bottom: 50px
+  position: relative
+
+  .col-34
+    height: 100%
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+    padding-left: 50px
+
+
+    @media (max-width: 840px)
+      align-items: center
+      //justify-content: center
+
+    @media (max-width: 640px)
+      justify-content: center
+
+    .title
+      //padding-left: 50px
+      margin-bottom: 10px
+      height: 10vw
+      width: 50vw
+      background:
+        image: url(../img/logo.svg)
+        size: contain
+        position: center
+        repeat: no-repeat
+
+    .divide-line
+      height: 2px
+      width: 50vw
+      background: black
+
+
+      //h1
+        color: black
+        font-size: 9vw
+        margin: 10px 0
+        text-align: center
+
+
+    h3
+      width: 50vw
+      color: black
+      text-align: center
+      font-size: 1.5vw
+      margin: 10px 0
+
+    @media (max-width: 840px)
+      padding: 50px 20px
+
+    @media (max-width: 640px)
+      h1
+        font-size: 15vw
+      h3
+        font-size: 3vw
+
+
+
+  .home-image
+    height: 20vw
+    width: 30vw
+    position: absolute
+    right: 0
+    bottom: 0
+    background:
+      image: url(../img/nail-polish-min.png)
+      size: contain
+      position: center
+      repeat: no-repeat
+      //color: black

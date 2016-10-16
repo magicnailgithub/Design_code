@@ -1,0 +1,28 @@
+//mixin face(face, words, name, color)
+  li.face(style="background-image: url(#{face});" data-text="#{words}" data-cite="#{name}" data-color="#{color}")
+    .screen
+//section.customers#customer
+  .top-sect.flex
+    .content-container
+      .title-container
+        h1.cus-title Customers
+      .cus-content
+        p.comment  
+        p.cite 
+        .top-screen 
+          p.screen-content Here is what our customers have been saying after their visits to our salon
+        //.avatar
+          //.fade-in-avatar
+  .bottom-sect
+    span.left-arrow
+    .faces-container  
+      ul.faces
+        +face("assets/img/testimonial-avatars/andrew.jpg", "Best nail jobs ever", "Andrew", "#e74c3c")
+        +face("assets/img/testimonial-avatars/gareth.jpg", "Shop owner is crazy", "Gareth", "#7f8c8d")
+        +face("assets/img/testimonial-avatars/joey.jpg", "She forced me to write this, I've never even been to this nail salon", "Joey", "#9b59b6")
+        +face("assets/img/testimonial-avatars/kim.jpg", "April is loud and crazy", "Kim", "#34495e")
+        +face("assets/img/testimonial-avatars/lj.jpg", "...", "Lj", "#3498db")
+        +face("assets/img/testimonial-avatars/mary.jpg", "Dafuq?", "Mary", "#f39c12")
+    span.right-arrow
+      
+      

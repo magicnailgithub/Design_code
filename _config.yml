@@ -1,0 +1,3 @@
+name: Magic nails website
+markdown: redcarpet
+exclude: ["node_modules", "gulpfile.js", "package.json"]

@@ -1,0 +1,37 @@
+mixin nav-content()
+  ul.nav-list
+    li: a(href="#home").nav.nav-home Home
+    li: a(href="#about").nav.nav-about About
+    li: a(href="#service").nav.nav-service Service
+    li: a(href="#contact").nav.nav-contact Contact
+.mobile-nav-container
+  .mobile-nav
+    +nav-content()
+    
+    .contact-container
+      .address
+        h3 Address
+        p 502 S Main St
+        p Mishawaka
+        p IN, 46544
+      
+      .phone
+        h3 Phone 
+        p (574) 307 - 1201
+        
+      .hours
+        h3 Hours
+        p Monday to Saturday: 10:00am - 8:00pm
+    
+header
+  .header-position
+    //.place-holder
+    
+    nav.site-nav
+      +nav-content()
+          
+    .mobile-logo
+      //p Magic Nails
+    
+    .mobile-nav-toggle: span
+  
