@@ -33,117 +33,16 @@
 
     .header-position
       position: fixed
-      //z-index: 5
+      //z-index: 6
       width: 135px
       top: 0
       bottom: 0
       display: flex
       flex-direction: column
       justify-content: space-between
+      z-index: 6
       //border-right: solid $accent-color 0.5px
       //background: pink
-
-      .find-nav-bar
-        width: 700px
-        transform: translateX(-565px)
-        height: 400px
-        background: $accent-color
-        display: flex
-        justify-content: flex-end
-        transition: all 0.3s ease-in-out
-        position: relative
-
-        &:hover
-          transform: translateX(0)
-
-        .find-nav-content
-          width: 100%
-          display: flex
-          justify-content: center
-          align-items: center
-          opacity: 0
-          transition: all 0.3s ease-in-out
-
-          &.is-open
-            opacity: 100
-
-          .find-nav-contact
-            height: 400px
-            display: flex
-            flex-direction: row
-            .find-nav-text
-              height: 100%
-              display: flex
-              flex-direction: column
-              justify-content: center
-              margin-right: 20px
-
-              .address,.phone
-                text-align: right
-
-                h3
-                  color: white
-                  margin: 0
-                  text-decoration: underline
-                p
-                  font-family: 'Quicksand', sans-serif
-                  color: white
-                  font-style: normal
-                  font-size: 18px
-
-                a
-                  font-size: 18px
-                  text-decoration: none
-
-                  &:hover
-                    text-decoration: underline
-
-            .address-image
-              width: 300px
-              height: 300px
-              margin: 50px 0
-              border: solid white 0.5px
-              border-radius: 10px
-              background:
-                image: url(../img/tien-doing-nail.jpg)
-                size: contain
-                repeat: no-repeat
-                position: center
-                //color: black
-
-        .find-nav-label
-          display: flex
-          width: 85px
-          text-align: center
-          align-items: center
-          position: absolute
-          height: 100%
-          right: 50px
-          opacity: 100
-          transition: all 0.3s ease-in-out
-
-          &.is-open
-            opacity: 0
-
-          h3
-            color: white
-
-
-
-        .pull-bar
-          width: 50px
-          border-left: solid white 0.5px
-          display: flex
-          justify-content: center
-          align-items: center
-
-          .circle-pull
-            width: 30px
-            height: 30px
-            border: solid white 0.5px
-            border-radius: 50%
-
-
 
       .site-nav
         //background: pink
@@ -162,11 +61,7 @@
             //text-align: center
             height: 25%
 
-            .nav-home,.nav-about,.nav-service,.nav-contact
-              opacity: 0
 
-              &.show
-                opacity: 1
 
             a
               text-decoration: none
